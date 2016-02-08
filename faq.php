@@ -7,14 +7,14 @@
     <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css">
-    
+
 </head>
 <body>
    <div class="container-fluid">
        <div class="row">
            <div id="header" class="col-sm-12"></div>
        </div>
-       
+
        <div class="row">
           <div class="col-sm-1"></div>
                <nav class="navbar navbar-default">
@@ -47,10 +47,10 @@
                            <li><a href="#">Link</a></li>
                        </ul>
                    </div>
-                   
+
                    <div id="content" class="col-sm-9">
                        <h3><center><b>FAQ</b></center></h3>
-                       <form action="">
+                       <form method="post">
                        <table>
                            <tr>
                                <th>Input Your Name </th>
@@ -77,7 +77,7 @@
                               <td></td>
                               <td></td>
                                <td>
-                                   <button class="btn btn-primary">POST</button>
+                                   <input type="submit" class="btn btn-primary" value="Kirim">
                                </td>
                            </tr>
                        </table>
@@ -85,9 +85,9 @@
                    </div>
                </div>
        </div>
-       
+
    </div>
-    
+
 <!-- JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
