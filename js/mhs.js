@@ -7,8 +7,10 @@ $(document).ready(function () {
         e.preventDefault();
 
         // Dapatkan variable - variable data untuk dikirimkan ke backend (php).
-        var nama = $form_balas_pertanyaan.find('input[name="nama"]').val();
-        var pertanyaan = $form_balas_pertanyaan.find('textarea[name="pertanyaan"]').val();
+        var $inputNama          = $form_balas_pertanyaan.find('input[name="nama"]');
+        var $inputPertanyaan    = $form_balas_pertanyaan.find('textarea[name="pertanyaan"]');
+        var nama                = $inputNama.val();
+        var pertanyaan          = $inputPertanyaan.val();
         var data = {
             nama: nama,
             pertanyaan: pertanyaan
@@ -33,6 +35,10 @@ $(document).ready(function () {
                         '&nbsp;' + resp.data.pertanyaan + '</li>' +
                         '</div>';
             $daftar_jawaban.append(newDiv);
+
+            // Bersihkan input nama & pertanyaan.
+            $inputNama.val('');
+            $inputPertanyaan.val('');
         }).fail(function(resp) {
             // Fungsi yg akan dipanggil ketika gagal
             // Beri tahu pengguna ketika gagal.
